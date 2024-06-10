@@ -12,6 +12,8 @@
     "gsap": "^3.12.5",
     "locomotive-scroll": "^4.1.4",
     "vue": "^3.2.13",
+    "vue-number-animation": "^2.0.2",
+    "vue3-autocounter": "^1.0.6",
     "vue3-lottie": "^3.3.0",
     "vue3-particles": "^2.12.0",
     "vuetify": "^3.6.8"

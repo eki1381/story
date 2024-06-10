@@ -13,7 +13,7 @@
       <div
         class="d-flex align-center justify-center text-center font-weight-black title"
       >
-        TAWA DAN TANGIS<br />
+        TANGIS DAN TAWA<br />
         MIGRAN DI INDONESIA
       </div>
       <div

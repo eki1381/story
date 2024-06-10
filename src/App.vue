@@ -16,7 +16,7 @@
         <PanelOne data-bgcolor="#65827E" data-textcolor="#000000"></PanelOne>
         <PanelTwo data-bgcolor="#0077b6" data-textcolor="#002400"></PanelTwo>
         <PanelThree data-bgcolor="#171F32" data-textcolor="#002400"></PanelThree>
-        <PanelFour data-bgcolor="#123456" data-textcolor="#002400"></PanelFour>
+        <PanelFour data-bgcolor="#30C7FF" data-textcolor="#002400"></PanelFour>
       </div>
     </v-main>
   </v-layout>

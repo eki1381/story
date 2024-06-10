@@ -9,13 +9,32 @@
       />
     </div>
     <div
-      class="position-absolute d-flex flex-column top-0 left-0 mt-5 ml-5 ga-3"
+      class="position-absolute d-flex flex-column top-0 left-0 mt-5 ml-5 ga-2"
     >
       <div class="d-flex align-center font-weight-medium narration1">
         Ketika kampung halaman terlihat&nbsp;<b>Gelap</b>&nbsp;
       </div>
       <div class="d-flex align-center font-weight-medium narration2">
         dan kampung tetangga terlihat lebih&nbsp;<b>Gemerlap</b>&nbsp;
+      </div>
+    </div>
+    <div
+      class="position-absolute d-flex flex-column bottom-0 right-0 mb-5 mr-5 ga-2"
+    >
+      <div
+        class="d-flex align-center justify-end text-right font-weight-medium narration3"
+      >
+        <b>Migrasi</b>&nbsp;menjadi pilihan banyak orang 
+      </div>
+      <div
+        class="d-flex align-center justify-end text-right font-weight-medium narration3"
+      >
+        karena memberikan peluang kehidupan 
+      </div>
+      <div
+        class="d-flex align-center justify-end text-right font-weight-medium narration3"
+      >
+        yang lebih baik
       </div>
     </div>
     <div
@@ -62,6 +81,7 @@ export default {
     initState() {
       gsap.to(".narration1", { opacity: 0, duration: 0.1 });
       gsap.to(".narration2", { opacity: 0, duration: 0.1 });
+      gsap.to(".narration3", { opacity: 0, duration: 0.1 });
       gsap.to(".city", { opacity: 0, duration: 0.1 });
       gsap.to(".button", { opacity: 0 });
 
@@ -80,11 +100,7 @@ export default {
       );
     },
     slideSceneOut() {
-      gsap.fromTo(
-        ".moon",
-        { opacity: 0 },
-        { opacity: 1, duration: 0.01 }
-      );
+      gsap.fromTo(".moon", { opacity: 0 }, { opacity: 1, duration: 0.01 });
       let tl = gsap.timeline();
       tl.fromTo(
         ".city",
@@ -105,6 +121,10 @@ export default {
         opacity: 0,
         duration: 0.01,
       });
+      tl.to(".narration3", {
+        opacity: 0,
+        duration: 0.01,
+      });
       tl.play();
     },
     onClickLanjut() {
@@ -112,11 +132,7 @@ export default {
         opacity: 1,
         duration: 1,
       });
-      gsap.fromTo(
-        ".moon",
-        { opacity: 1 },
-        { opacity: 0, duration: 0.01 }
-      );
+      gsap.fromTo(".moon", { opacity: 1 }, { opacity: 0, duration: 0.01 });
       let tl = gsap.timeline();
       tl.fromTo(
         ".village",
@@ -129,6 +145,10 @@ export default {
         { y: 100, opacity: 0 },
         { y: 0, opacity: 1, duration: 1 }
       );
+      gsap.to(".narration3", {
+        opacity: 1,
+        duration: 1,
+      });
       tl.play();
     },
   },
@@ -158,14 +178,21 @@ export default {
   font-family: "Barlow", sans-serif;
   font-style: normal;
   color: #ffffff;
-  font-size: 20pt;
+  font-size: 18pt;
   line-height: 1;
 }
 .narration2 {
   font-family: "Barlow", sans-serif;
   font-style: normal;
   color: #ffffff;
-  font-size: 20pt;
+  font-size: 18pt;
+  line-height: 1;
+}
+.narration3 {
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 18pt;
   line-height: 1;
 }
 </style>

@@ -8,6 +8,7 @@ import * as directives from 'vuetify/directives'
 import '@mdi/font/css/materialdesignicons.css'
 
 import Vue3Lottie from 'vue3-lottie'
+import Vue3Autocounter from 'vue3-autocounter';
 
 import "./style.css";
 
@@ -23,4 +24,4 @@ const vuetify = createVuetify({
     },
 })
 
-createApp(App).use(vuetify).use(Vue3Lottie).use(gsap).mount('#app')
+createApp(App).use(vuetify).use(Vue3Lottie).use(gsap).component('vue3-autocounter', Vue3Autocounter).mount('#app')
