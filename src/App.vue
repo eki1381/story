@@ -17,6 +17,7 @@
         <PanelTwo data-bgcolor="#0077b6" data-textcolor="#002400"></PanelTwo>
         <PanelThree data-bgcolor="#171F32" data-textcolor="#002400"></PanelThree>
         <PanelFour data-bgcolor="#30C7FF" data-textcolor="#002400"></PanelFour>
+        <PanelFive data-bgcolor="#FFDB5E" data-textcolor="#002400"></PanelFive>
       </div>
     </v-main>
   </v-layout>
@@ -31,6 +32,7 @@ import PanelOne from "./components/PanelOne.vue";
 import PanelTwo from "./components/PanelTwo.vue";
 import PanelThree from "./components/PanelThree.vue";
 import PanelFour from "./components/PanelFour.vue";
+import PanelFive from "./components/PanelFive.vue";
 
 export default {
   name: "App",
@@ -39,6 +41,7 @@ export default {
     PanelTwo,
     PanelThree,
     PanelFour,
+    PanelFive,
   },
   methods: {},
   mounted() {

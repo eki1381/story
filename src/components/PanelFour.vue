@@ -2,27 +2,9 @@
   <div
     class="h-screen w-screen d-flex position-relative flex-column align-center panelfour pa-12 ga-6"
   >
-  <div class="d-flex w-100 bottom-0 position-absolute globe crowd-1971">
+    <div class="d-flex w-100 bottom-0 position-absolute globe crowd-2020">
       <v-img
-        src="https://raw.githubusercontent.com/eki1381/Storytelling/main/crowd_1971.png"
-        style="height: 100%"
-      />
-    </div>
-    <div class="d-flex w-100 bottom-0 position-absolute globe crowd-1980">
-      <v-img
-        src="https://raw.githubusercontent.com/eki1381/Storytelling/main/crowd_1980.png"
-        style="height: 100%"
-      />
-    </div>
-    <div class="d-flex w-100 bottom-0 position-absolute globe crowd-1990">
-      <v-img
-        src="https://raw.githubusercontent.com/eki1381/Storytelling/main/crowd_1990.png"
-        style="height: 100%"
-      />
-    </div>
-    <div class="d-flex w-100 bottom-0 position-absolute globe crowd-2000">
-      <v-img
-        src="https://raw.githubusercontent.com/eki1381/Storytelling/main/crowd_2000.png"
+        src="https://raw.githubusercontent.com/eki1381/Storytelling/main/crowd_2020.png"
         style="height: 100%"
       />
     </div>
@@ -32,27 +14,58 @@
         style="height: 100%"
       />
     </div>
-    <div class="d-flex w-100 bottom-0 position-absolute globe crowd-2020">
+    <div class="d-flex w-100 bottom-0 position-absolute globe crowd-2000">
       <v-img
-        src="https://raw.githubusercontent.com/eki1381/Storytelling/main/crowd_2020.png"
+        src="https://raw.githubusercontent.com/eki1381/Storytelling/main/crowd_2000.png"
         style="height: 100%"
       />
     </div>
+    <div class="d-flex w-100 bottom-0 position-absolute globe crowd-1990">
+      <v-img
+        src="https://raw.githubusercontent.com/eki1381/Storytelling/main/crowd_1990.png"
+        style="height: 100%"
+      />
+    </div>
+    <div class="d-flex w-100 bottom-0 position-absolute globe crowd-1980">
+      <v-img
+        src="https://raw.githubusercontent.com/eki1381/Storytelling/main/crowd_1980.png"
+        style="height: 100%"
+      />
+    </div>
+    <div class="d-flex w-100 bottom-0 position-absolute globe crowd-1971">
+      <v-img
+        src="https://raw.githubusercontent.com/eki1381/Storytelling/main/crowd_1971.png"
+        style="height: 100%"
+      />
+    </div>
+
     <div class="d-flex flex-column w-100 ga-6">
       <div class="d-flex flex-row ga-2 justify-end">
-        <div class="title-panelfour font-weight-normal text-left">
+        <div class="title-panelfour font-weight-black text-right">
           Tren Migrasi Seumur Hidup<br />Antar Provinsi di Indonesia
         </div>
-        <div class="h-100" style="width: 3px; background-color: white;"></div>
+        <div class="h-100" style="width: 3px; background-color: white"></div>
       </div>
 
       <div class="d-flex flex-row ga-6 justify-end">
         <div class="d-flex flex-column justify-center ga-2" style="color: ">
           <div class="title-value font-weight-thin text-center">Tahun</div>
           <div class="d-flex flex-row align-center">
-            <v-btn variant="text" icon="mdi-menu-left" color="white" @click="decreaseYear"></v-btn>
-            <div class="value font-weight-bold text-center">{{ currentYear }}</div>
-            <v-btn variant="text" icon="mdi-menu-right" color="white" @click="increaseYear"></v-btn>
+            <v-btn
+              variant="text"
+              icon="mdi-menu-left"
+              color="white"
+              @click="decreaseYear"
+            ></v-btn>
+            <div class="value font-weight-bold text-center">
+              {{ currentYear }}
+            </div>
+            <v-btn
+              variant="text"
+              icon="mdi-menu-right"
+              color="white"
+              @click="increaseYear"
+            ></v-btn>
           </div>
         </div>
         <div class="d-flex flex-column justify-center ga-2">
@@ -69,7 +82,6 @@
         </div>
       </div>
     </div>
-    
   </div>
 </template>
   
@@ -85,7 +97,7 @@ export default {
       years: [1971, 1980, 1990, 2000, 2010, 2020],
       migration: [4.9, 6.9, 8.2, 9.9, 11.8, 9.8],
       previousMigration: 0,
-    }
+    };
   },
   computed: {
     currentIndex() {
@@ -127,9 +139,9 @@ export default {
       const currentIndex = this.years.indexOf(this.currentYear);
       const nextIndex = currentIndex + 1;
       if (nextIndex < this.years.length) {
-        this.currentYear = this.years[nextIndex]; 
+        this.currentYear = this.years[nextIndex];
       }
-      this.changeYear(this.currentYear)
+      this.changeYear(this.currentYear);
     },
     decreaseYear() {
       const currentIndex = this.years.indexOf(this.currentYear);
@@ -137,10 +149,10 @@ export default {
       if (prevIndex >= 0) {
         this.currentYear = this.years[prevIndex];
       }
-      this.changeYear(this.currentYear)
+      this.changeYear(this.currentYear);
     },
-    changeYear(year){
-      if(year == 1971){
+    changeYear(year) {
+      if (year == 1971) {
         gsap.to(".crowd-1971", { opacity: 1, duration: 0.01 });
         gsap.to(".crowd-1980", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-1990", { opacity: 0, duration: 0.01 });
@@ -148,7 +160,7 @@ export default {
         gsap.to(".crowd-2010", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-2020", { opacity: 0, duration: 0.01 });
       }
-      if(year == 1980){
+      if (year == 1980) {
         gsap.to(".crowd-1980", { opacity: 1, duration: 0.01 });
         gsap.to(".crowd-1971", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-1990", { opacity: 0, duration: 0.01 });
@@ -156,7 +168,7 @@ export default {
         gsap.to(".crowd-2010", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-2020", { opacity: 0, duration: 0.01 });
       }
-      if(year == 1990){
+      if (year == 1990) {
         gsap.to(".crowd-1990", { opacity: 1, duration: 0.01 });
         gsap.to(".crowd-1971", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-1980", { opacity: 0, duration: 0.01 });
@@ -164,7 +176,7 @@ export default {
         gsap.to(".crowd-2010", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-2020", { opacity: 0, duration: 0.01 });
       }
-      if(year == 2000){
+      if (year == 2000) {
         gsap.to(".crowd-2000", { opacity: 1, duration: 0.01 });
         gsap.to(".crowd-1971", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-1980", { opacity: 0, duration: 0.01 });
@@ -172,7 +184,7 @@ export default {
         gsap.to(".crowd-2010", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-2020", { opacity: 0, duration: 0.01 });
       }
-      if(year == 2010){
+      if (year == 2010) {
         gsap.to(".crowd-2010", { opacity: 1, duration: 0.01 });
         gsap.to(".crowd-1971", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-1980", { opacity: 0, duration: 0.01 });
@@ -180,7 +192,7 @@ export default {
         gsap.to(".crowd-2000", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-2020", { opacity: 0, duration: 0.01 });
       }
-      if(year == 2020){
+      if (year == 2020) {
         gsap.to(".crowd-2020", { opacity: 1, duration: 0.01 });
         gsap.to(".crowd-1971", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-1980", { opacity: 0, duration: 0.01 });
@@ -188,10 +200,11 @@ export default {
         gsap.to(".crowd-2000", { opacity: 0, duration: 0.01 });
         gsap.to(".crowd-2010", { opacity: 0, duration: 0.01 });
       }
-    }
+    },
   },
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
+    this.changeYear(this.currentYear);
 
     ScrollTrigger.create({
       trigger: ".panelfour",
@@ -204,7 +217,6 @@ export default {
         this.slideSceneFourOut();
       },
     });
-    this.changeYear(1971);
   },
 };
 </script>
