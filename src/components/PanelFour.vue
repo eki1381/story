@@ -2,6 +2,77 @@
   <div
     class="h-screen w-screen d-flex position-relative flex-column align-center panelfour pa-12 ga-6"
   >
+    <div class="d-flex w-100 top-0 position-absolute">
+      <vue-particles
+        id="tsParticles2"
+        class="w-100 h-auto"
+        :options="{
+          fullScreen: {
+            enable: false,
+            zIndex: 0,
+          },
+          background: {
+            color: 'transparent',
+          },
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: 'repulse',
+              },
+              onHover: {
+                enable: true,
+                mode: 'bubble',
+              },
+            },
+            modes: {
+              bubble: {
+                distance: 200,
+                duration: 2,
+                opacity: 0,
+                size: 0,
+                speed: 3,
+              },
+              repulse: {
+                distance: 400,
+                duration: 0.4,
+              },
+            },
+          },
+          particles: {
+            color: { value: '#ffffff' },
+            move: {
+              direction: 'none',
+              enable: true,
+              outModes: 'out',
+              random: true,
+              speed: 0.3,
+            },
+            number: {
+              density: {
+                enable: true,
+              },
+              value: 600,
+            },
+            opacity: {
+              animation: {
+                enable: true,
+                speed: 5,
+              },
+              value: { min: 0.3, max: 0.6 },
+            },
+            shape: {
+              type: 'circle',
+            },
+            size: {
+              value: 1,
+            },
+          },
+        }"
+      >
+      </vue-particles>
+    </div>
+
     <div class="d-flex w-100 bottom-0 position-absolute globe crowd-2020">
       <v-img
         src="https://raw.githubusercontent.com/eki1381/Storytelling/main/crowd_2020.png"
@@ -122,18 +193,18 @@ export default {
       );
     },
     slideSceneFourOut() {
-      let tl = gsap.timeline();
-      tl.fromTo(
-        ".globe",
-        { y: 0, opacity: 0 },
-        {
-          y: 100,
-          opacity: 1,
-          duration: 2,
-        }
-      );
-      tl.to(".globe", { y: 0, opacity: 0, duration: 0.01 });
-      tl.play();
+      // let tl = gsap.timeline();
+      // tl.fromTo(
+      //   ".globe",
+      //   { y: 0, opacity: 0 },
+      //   {
+      //     y: 100,
+      //     opacity: 1,
+      //     duration: 2,
+      //   }
+      // );
+      // tl.to(".globe", { y: 0, opacity: 0, duration: 0.01 });
+      // tl.play();
     },
     increaseYear() {
       const currentIndex = this.years.indexOf(this.currentYear);
@@ -227,7 +298,7 @@ export default {
 .title-panelfour {
   font-family: "Barlow", sans-serif;
   font-style: normal;
-  color: #ffffff;
+  color: white;
   font-size: 32pt;
   line-height: 1;
 }
@@ -235,7 +306,7 @@ export default {
 .value {
   font-family: "Barlow", sans-serif;
   font-style: normal;
-  color: #ffffff;
+  color: white;
   font-size: 32pt;
   line-height: 1;
 }
@@ -243,7 +314,7 @@ export default {
 .title-value {
   font-family: "Barlow", sans-serif;
   font-style: normal;
-  color: #ffffff;
+  color: white;
   font-size: 18pt;
   line-height: 1;
 }
