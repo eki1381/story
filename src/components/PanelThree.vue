@@ -24,12 +24,12 @@
       <div
         class="d-flex align-center justify-end text-right font-weight-medium narration3"
       >
-        <b>Migrasi</b>&nbsp;menjadi pilihan banyak orang 
+        <b>Migrasi</b>&nbsp;menjadi pilihan banyak orang
       </div>
       <div
         class="d-flex align-center justify-end text-right font-weight-medium narration3"
       >
-        karena memberikan peluang kehidupan 
+        karena memberikan peluang kehidupan
       </div>
       <div
         class="d-flex align-center justify-end text-right font-weight-medium narration3"

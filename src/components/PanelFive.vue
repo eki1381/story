@@ -14,12 +14,15 @@
       <v-timeline>
         <v-timeline-item dot-color="#71B48D" size="x-small" fill-dot>
           <template v-slot:opposite>
-            <v-img
-              :width="300"
-              aspect-ratio="16/9"
-              cover
-              src="https://raw.githubusercontent.com/eki1381/Storytelling/main/periode_kolonialisme.jpg"
-            ></v-img>
+            <kinesis-container>
+              <kinesis-element
+                tag="img"
+                :strength="10"
+                type="depth"
+                src="https://raw.githubusercontent.com/eki1381/Storytelling/main/periode_kolonialisme.jpg"
+                style="width: 300px; height: auto"
+              />
+            </kinesis-container>
           </template>
           <v-card variant="tonal"
             ><v-card-item
@@ -38,14 +41,17 @@
           >
         </v-timeline-item>
         <v-timeline-item dot-color="#71B48D" size="x-small" fill-dot>
-          <template v-slot:opposite
-            ><v-img
-              :width="300"
-              aspect-ratio="16/9"
-              cover
-              src="https://raw.githubusercontent.com/eki1381/Storytelling/main/periode_orde_lama.jpeg"
-            ></v-img
-          ></template>
+          <template v-slot:opposite>
+            <kinesis-container>
+              <kinesis-element
+                tag="img"
+                :strength="10"
+                type="depth"
+                src="https://raw.githubusercontent.com/eki1381/Storytelling/main/periode_orde_lama.jpeg"
+                style="width: 300px; height: auto"
+              />
+            </kinesis-container>
+          </template>
           <v-card variant="tonal"
             ><v-card-item
               ><v-card-title>PERIODE ORDE LAMA</v-card-title
@@ -61,14 +67,17 @@
           >
         </v-timeline-item>
         <v-timeline-item dot-color="#71B48D" size="x-small" fill-dot>
-          <template v-slot:opposite
-            ><v-img
-              :width="300"
-              aspect-ratio="16/9"
-              cover
-              src="https://raw.githubusercontent.com/eki1381/Storytelling/main/periode_orde_baru.jpeg"
-            ></v-img
-          ></template>
+          <template v-slot:opposite>
+            <kinesis-container>
+              <kinesis-element
+                tag="img"
+                :strength="10"
+                type="depth"
+                src="https://raw.githubusercontent.com/eki1381/Storytelling/main/periode_orde_baru.jpeg"
+                style="width: 300px; height: auto"
+              />
+            </kinesis-container>
+          </template>
           <v-card variant="tonal"
             ><v-card-item
               ><v-card-title>PERIODE PELITA</v-card-title
@@ -108,14 +117,17 @@
           >
         </v-timeline-item>
         <v-timeline-item dot-color="#71B48D" size="x-small" fill-dot>
-          <template v-slot:opposite
-            ><v-img
-              :width="300"
-              aspect-ratio="16/9"
-              cover
-              src="https://raw.githubusercontent.com/eki1381/Storytelling/main/periode_reformasi.jpeg"
-            ></v-img
-          ></template>
+          <template v-slot:opposite>
+            <kinesis-container>
+              <kinesis-element
+                tag="img"
+                :strength="10"
+                type="depth"
+                src="https://raw.githubusercontent.com/eki1381/Storytelling/main/periode_reformasi.jpeg"
+                style="width: 300px; height: auto"
+              />
+            </kinesis-container>
+          </template>
           <v-card variant="tonal"
             ><v-card-item
               ><v-card-title>PERIODE REFORMASI</v-card-title
@@ -135,9 +147,12 @@
   </div>
 </template>
   
-  <script>
+<script>
+import { KinesisContainer, KinesisElement } from "vue-kinesis";
+
 export default {
   name: "PanelFive",
+  components: [KinesisContainer, KinesisElement],
 };
 </script>
   
