@@ -1,18 +1,16 @@
 <template>
-  <div class="h-screen w-screen d-flex flex-column pa-12 ga-6">
-    <div class="d-flex flex-column ga-4">
-      <div class="title-panelfour font-weight-black">
-        Sejarah mencatat migrasi telah dilakukan penduduk Indonesia sejak zaman
-        kolonial
+  <div class="h-auto w-screen d-flex flex-column pa-12 ga-6">
+    <div class="d-flex h-25 w-auto flex-column pa-4 ga-4">
+      <div class="title-panelfive font-weight-black">
+        Sejarah mencatat migrasi telah dilakukan penduduk Indonesia sejak zaman kolonial
       </div>
-      <div class="subtitle-panelfour font-weight-normal">
-        Pemerintah Indonesia berupaya untuk melakukan pendistribusian jumlah
-        penduduk melalui program transmigrasi
+      <div class="subtitle-panelfive font-weight-normal">
+        Pemerintah Indonesia berupaya untuk melakukan pendistribusian jumlah penduduk melalui program transmigrasi
       </div>
     </div>
     <div>
       <v-timeline>
-        <v-timeline-item dot-color="#71B48D" size="x-small" fill-dot>
+        <v-timeline-item dot-color="#FF4242" size="x-small" fill-dot>
           <template v-slot:opposite>
             <kinesis-container>
               <kinesis-element
@@ -24,7 +22,7 @@
               />
             </kinesis-container>
           </template>
-          <v-card variant="tonal"
+          <v-card class="rounded-xl elevation-0" color="#FF4242"
             ><v-card-item
               ><v-card-title>PERIODE KOLONISASI</v-card-title
               ><v-card-subtitle>1905-1941</v-card-subtitle>
@@ -40,7 +38,7 @@
             </v-card-item></v-card
           >
         </v-timeline-item>
-        <v-timeline-item dot-color="#71B48D" size="x-small" fill-dot>
+        <v-timeline-item dot-color="#FFC800" size="x-small" fill-dot>
           <template v-slot:opposite>
             <kinesis-container>
               <kinesis-element
@@ -52,7 +50,7 @@
               />
             </kinesis-container>
           </template>
-          <v-card variant="tonal"
+          <v-card class="rounded-xl elevation-0" color="#FFC800"
             ><v-card-item
               ><v-card-title>PERIODE ORDE LAMA</v-card-title
               ><v-card-subtitle>1945-1968</v-card-subtitle>
@@ -66,7 +64,7 @@
             </v-card-item></v-card
           >
         </v-timeline-item>
-        <v-timeline-item dot-color="#71B48D" size="x-small" fill-dot>
+        <v-timeline-item dot-color="#2F9C95" size="x-small" fill-dot>
           <template v-slot:opposite>
             <kinesis-container>
               <kinesis-element
@@ -78,7 +76,7 @@
               />
             </kinesis-container>
           </template>
-          <v-card variant="tonal"
+          <v-card class="rounded-xl elevation-0" color="#2F9C95"
             ><v-card-item
               ><v-card-title>PERIODE PELITA</v-card-title
               ><v-card-subtitle>1969-1999</v-card-subtitle>
@@ -86,8 +84,8 @@
                 >Dilatarbelakangi kebijakan pada masa orde baru, yaitu
                 transmigrasi dijadikan prioritas nasional yang dituangkan dalam
                 program Rencana Pembangunan Lima Tahun (Pelita).
-                <v-list lines="one" style="background-color: transparent">
-                  <v-list-item
+                <v-list lines="one" style="background-color: transparent; color:white">
+                  <v-list-item 
                     >Pelita I (1969-1974):
                     <b>163.624 jiwa/40.906 KK</b></v-list-item
                   >
@@ -116,7 +114,7 @@
             </v-card-item></v-card
           >
         </v-timeline-item>
-        <v-timeline-item dot-color="#71B48D" size="x-small" fill-dot>
+        <v-timeline-item dot-color="#4D8B31" size="x-small" fill-dot>
           <template v-slot:opposite>
             <kinesis-container>
               <kinesis-element
@@ -128,7 +126,7 @@
               />
             </kinesis-container>
           </template>
-          <v-card variant="tonal"
+          <v-card class="rounded-xl" color="#4D8B31"
             ><v-card-item
               ><v-card-title>PERIODE REFORMASI</v-card-title
               ><v-card-subtitle>2000-sekarang</v-card-subtitle>
@@ -159,18 +157,18 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.title-panelfour {
+.title-panelfive {
   font-family: "Barlow", sans-serif;
   font-style: normal;
-  color: #fa7921;
+  color: #0B3C49;
   font-size: 32pt;
   line-height: 1;
 }
 
-.subtitle-panelfour {
+.subtitle-panelfive {
   font-family: "Barlow", sans-serif;
   font-style: normal;
-  color: #201e1f;
+  color: #0B3C49;
   font-size: 16pt;
   line-height: 1;
 }

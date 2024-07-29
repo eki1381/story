@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-screen">
+  <div class="h-screen w-screen overflow-hidden">
     <div class="position-relative">
       <Vue3Lottie
         animation-link="https://raw.githubusercontent.com/eki1381/Storytelling/main/Car%20Moving.json"

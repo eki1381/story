@@ -1,23 +1,35 @@
 <template>
   <v-layout>
-    <v-app-bar style="z-index: 1" app fixed :flat="true" :color="'transparent'">
+    <!-- <v-app-bar style="z-index: 1" app fixed :flat="true" :color="'transparent'">
       <v-toolbar-title>
-        <!-- <v-img
+        <v-img
           class="toolbar"
           :height="'40px'"
           :width="'auto'"
           contain
           src="https://raw.githubusercontent.com/eki1381/Storytelling/main/logo.png"
-        ></v-img> -->
+        ></v-img>
       </v-toolbar-title>
-    </v-app-bar>
+    </v-app-bar> -->
     <v-main class="d-flex align-center justify-center pt-0" style="z-index: 0">
       <div class="container">
         <PanelOne data-bgcolor="#65827E" data-textcolor="#000000"></PanelOne>
         <PanelTwo data-bgcolor="#0077b6" data-textcolor="#002400"></PanelTwo>
         <PanelThree data-bgcolor="#171F32" data-textcolor="#002400"></PanelThree>
-        <PanelFour data-bgcolor="#001011" data-textcolor="#002400"></PanelFour>
-        <PanelFive data-bgcolor="#FFDB5E" data-textcolor="#002400"></PanelFive>
+        <PanelFour data-bgcolor="#97D2FB" data-textcolor="#002400"></PanelFour>
+        <PanelFive data-bgcolor="#C2F9BB" data-textcolor="#002400"></PanelFive>
+        <PanelSix data-bgcolor="#FFF1D0" data-textcolor="#002400"></PanelSix>
+        <PanelSeven data-bgcolor="#FFF1D0" data-textcolor="#002400"></PanelSeven>
+        <PanelEight data-bgcolor="#FFF1D0" data-textcolor="#002400"></PanelEight>
+        <PanelNine data-bgcolor="#FFFEF3" data-textcolor="#002400"></PanelNine>
+        <PanelTen data-bgcolor="#FFFEF3" data-textcolor="#002400"></PanelTen>
+        <PanelEleven data-bgcolor="#FFFEF3" data-textcolor="#002400"></PanelEleven>
+        <PanelTwelve data-bgcolor="#633F39" data-textcolor="#002400"></PanelTwelve>
+        <PanelThirteen data-bgcolor="#99dff8" data-textcolor="#002400"></PanelThirteen>
+        <PanelFourteen data-bgcolor="#99dff8" data-textcolor="#002400"></PanelFourteen>
+        <PanelFifteen data-bgcolor="#99dff8" data-textcolor="#002400"></PanelFifteen>
+        <PanelSixteen data-bgcolor="#99dff8" data-textcolor="#002400"></PanelSixteen>
+        <PanelSeventeen data-bgcolor="#256ab5" data-textcolor="#002400"></PanelSeventeen>
       </div>
     </v-main>
   </v-layout>
@@ -33,6 +45,18 @@ import PanelTwo from "./components/PanelTwo.vue";
 import PanelThree from "./components/PanelThree.vue";
 import PanelFour from "./components/PanelFour.vue";
 import PanelFive from "./components/PanelFive.vue";
+import PanelSix from "./components/PanelSix.vue";
+import PanelSeven from "./components/PanelSeven.vue";
+import PanelEight from "./components/PanelEight.vue";
+import PanelNine from "./components/PanelNine.vue";
+import PanelTen from "./components/PanelTen.vue";
+import PanelEleven from "./components/PanelEleven.vue";
+import PanelTwelve from "./components/PanelTwelve.vue";
+import PanelThirteen from "./components/PanelThirteen.vue";
+import PanelFourteen from "./components/PanelFourteen.vue";
+import PanelFifteen from "./components/PanelFifteen.vue";
+import PanelSixteen from "./components/PanelSixteen.vue";
+import PanelSeventeen from "./components/PanelSeventeen.vue";
 
 export default {
   name: "App",
@@ -42,6 +66,18 @@ export default {
     PanelThree,
     PanelFour,
     PanelFive,
+    PanelSix,
+    PanelSeven,
+    PanelEight,
+    PanelNine,
+    PanelTen,
+    PanelEleven,
+    PanelTwelve,
+    PanelThirteen,
+    PanelFourteen,
+    PanelFifteen,
+    PanelSixteen,
+    PanelSeventeen,
   },
   methods: {},
   mounted() {

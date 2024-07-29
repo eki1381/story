@@ -13,6 +13,8 @@ import Particles from "@tsparticles/vue3";
 import { loadFull } from "tsparticles";
 import VueKinesis from "vue-kinesis";
 
+import VueApexCharts from "vue3-apexcharts";
+
 import "./style.css";
 
 import { gsap } from "gsap";
@@ -31,4 +33,4 @@ createApp(App).use(vuetify).use(Vue3Lottie).use(gsap).component('vue3-autocounte
     init: async engine => {
         await loadFull(engine);
     },
-}).use(VueKinesis).mount('#app')
+}).use(VueKinesis).use(VueApexCharts).mount('#app')
